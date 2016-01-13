@@ -3,8 +3,7 @@ package leetcode;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 /*
@@ -28,7 +27,6 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 public class Leetcode268 {
 
 
-
     /*
     *  另数学解法:  求0,1...n的等差数列求和, 减去given数列和即可.
     * */
@@ -36,11 +34,11 @@ public class Leetcode268 {
     public void should_resolve_268() throws Exception {
         int[] given = new int[]{40, 43, 42, 18, 6, 13, 19, 8, 44, 4, 12, 22, 31, 30, 10, 16, 3, 17, 25, 7, 41, 21, 48, 26, 32, 27, 49, 15, 1, 20, 35, 46, 11, 23, 2, 0, 38, 28, 37, 9, 39, 47, 36, 45, 24, 34, 29, 14, 33};
         int expect = 5;
-        assertThat(resolve_268_quick_xor(given), is(expect));
+        assertThat(resolve_268_quick_xor(given)).isEqualTo(expect);
 
         int[] given2 = new int[]{1, 0};
         int expect2 = 2;
-        assertThat(resolve_268_quick_xor(given2), is(expect2));
+        assertThat(resolve_268_quick_xor(given2)).isEqualTo(expect2);
 
     }
 
