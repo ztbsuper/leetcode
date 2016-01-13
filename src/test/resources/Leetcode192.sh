@@ -1,0 +1,1 @@
+cat Leetcode192input.txt | tr ' ' "\n" | tr -s [:space:]  |sort -nr |uniq -c|sort -nr | awk '{printf($2 " "$1"\n")}'
