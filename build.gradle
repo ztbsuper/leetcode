@@ -11,4 +11,5 @@ dependencies {
             [group: 'junit', name: 'junit', version: '4.11'],
             [group: 'org.assertj', name: 'assertj-core', version: '3.0.0']
     )
+    testCompile('joda-time:joda-time:2.9.3')
 }
